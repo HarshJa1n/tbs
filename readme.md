@@ -1,16 +1,7 @@
-# NextJS Academic Theme
 
-## [Demo](https://nextjs-academic-theme.vercel.app/)
+
 > A simple academic personal website, built with Preact, Tailwind CSS and Next.js, focused on performance, a11y and privacy 🚀
 
-## Customize your info
-- in components/data/personalInfo.json
-- in components/data/publications.json
-- in components/data/projects.json
-- in components/data/teaching.json
-- in .env
-- in public/cv.pdf
----
 
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
 
