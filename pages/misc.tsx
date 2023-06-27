@@ -33,6 +33,7 @@ import axios from 'axios';
 import { NextPage } from 'next';
 import { Audio } from 'react-loader-spinner';
 import Link from "next/link";
+import { useTheme } from 'next-themes';
 
 
 const Style = {
@@ -45,6 +46,10 @@ const Misc: NextPage<unknown> = () => {
     const [loading, setLoading] = useState(true);
     const [blogs, setBlogs] = useState([]);
     const [posts, setPosts] = useState([]);
+    const { resolvedTheme, setTheme } = useTheme();
+
+    console.log(resolvedTheme);
+
 
     useEffect(() => {
         const fetchPosts = async () => {
