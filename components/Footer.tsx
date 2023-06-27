@@ -47,6 +47,9 @@ const Footer = (): JSX.Element => {
                     <Box href={personalInfo.socialMedia.Instagram} label="Instagram">
                         <IconImage path='/images/icons8-instagram.svg' name="Instagram" />
                     </Box>
+                    <Box href={personalInfo.socialMedia.YouTube} label="Youtube">
+                        <IconImage path='/images/icons8-youtube.svg' name="Youtube" />
+                    </Box>
 
 
                 </div>

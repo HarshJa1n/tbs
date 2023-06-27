@@ -1,0 +1,99 @@
+.blog {
+    min-height: 460px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .blog .latestposts {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .blog .latestposts > div {
+    position: relative;
+    border-radius: 20px;
+    background: #222;
+  }
+  
+  .blog .latestposts > div {
+   margin: 0 30px 10px 30px;
+  }
+  
+  .blog .latestposts > div a {
+    display: block;
+    color: #fff;
+    position: relative;
+    text-decoration: none;
+    border-radius: 20px;
+  }
+  
+  .blog .latestposts > div a .img-holder {
+    overflow: hidden;
+    display: block;
+    border-radius: 20px 20px 0 0;
+  }
+  
+  .blog .latestposts a img {
+    width: 360px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.5s;
+    border-radius: 20px 20px 0 0;
+  }
+  
+  .blog .latestposts a:hover img {
+    transform: scale(1.2);
+  }
+  
+  .blog .latestposts a .content {
+    padding: 35px 30px 30px;
+    position: relative;
+    background-color: #222;
+    border-radius: 0 0 20px 20px;
+    max-width: 360px;
+  }
+  
+  .blog .latestposts a .content span.title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 32px;
+    display: block;
+  }
+  
+  .blog .latestposts a .content p {
+    font-size: 16px;
+    margin: 15px 0 0;
+    line-height: 30px;
+    opacity: 0.8;
+  }
+  
+  .blog .category {
+    position: absolute;
+    top: -14px;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 3px 20px;
+    border-radius: 20px;
+    left: 30px;
+    height: 28px;
+    line-height: 23px;
+    font-weight: 500;
+  }
+  
+  .blog .meta {
+    font-size: 12px;
+    margin-top: 20px;
+    opacity: 0.6;
+  }
+  
+  .blog .meta > div i {
+    margin-right: 6px;
+  }
+  
+  .blog .meta > div:not(:first-child) {
+    margin-left: 15px;
+  }
+  
