@@ -5,7 +5,7 @@ import { ThemeProvider, useTheme } from 'next-themes';
 import Layout from '../components/Layout';
 import personalInfo from '../components/data/personalInfo.json';
 import GoogleTag from '../components/GoogleTag';
-import '../styles/blog.css';
+// import '../styles/blog.css';
 
 import 'tailwindcss/tailwind.css';
 

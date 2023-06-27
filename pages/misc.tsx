@@ -32,7 +32,12 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { NextPage } from 'next';
 import { Audio } from 'react-loader-spinner';
-import Link from "next/link";
+import Link from 'next/link';
+import { Card } from 'antd';
+// import 'antd/dist/antd.css'; // Import the Ant Design CSS
+
+// Rest of your code
+
 
 
 const Style = {
@@ -64,50 +69,41 @@ const Misc: NextPage<unknown> = () => {
                     <Audio color="#3B82F6" height={80} width={80} />
                 </div>
             ) : (
-                <section className="blog main-section flex-column-mobile" id="blog">
+                <section className="blog flex main-section flex-column-mobile" id="blog">
                     {/* TITLE STARTS */}
                     {/* ... */}
                     {/* TITLE ENDS */}
                     {/* LATEST POSTS STARTS */}
-                    <div className="latestposts flex-column-mobile">
+
+
+                    <div className="latestposts flex flex-column-mobile justify-center flex-wrap ">
                         {posts.map((post: any, index) => (
-                            console.log(post),
-                            <div
-                                key={index}
-                                className="animated-layer fade-in-right-animation fadeInUp wow"
-                            >
-                                <Link href={post.link} legacyBehavior passHref>
-                                    <a target="_blank" rel="noopener noreferrer">
-                                        <span className="img-holder">
-                                            {/* You might need to find a way to display post images */}
-                                            <img src="assets/blog/blog-post-1.jpg" alt="" />
-                                        </span>
-                                        <div className="content">
-                                            {/* get categorofy if not then set it as machine learning */}
-                                            <span className="category">{post.categories[0] ?? "Machine Learning"}</span>
-                                            {/* get the title of the post */}
-                                            <span className="title">{post.title}</span>
-                                            <p>
-                                                {/* get only 13 words from post content:encodedSnippet */}
-                                                {post["content:encodedSnippet"].split(" ").slice(0, 12).join(" ")}...
-                                            </p>
-                                            <div className="meta d-flex align-items-center">
-                                                <div className="d-flex align-items-center">
-                                                    <i className="fa-regular fa-calendar" />
-                                                    <span>{new Date(post.pubDate).toLocaleDateString()}</span>
-                                                </div>
-                                                <div className="d-flex align-items-center">
-                                                    {/* Comments count is not available in the RSS feed */}
-                                                    <i className="fa-regular fa-comments" />
-                                                    <span>17 comments</span>
-                                                </div>
-                                            </div>
+                            <div key={index} className="animated-layer dark:inverse fade-in-right-animation fadeInUp wow m-2 w-full">
+                                <Card
+                                    bordered={false}
+                                    style={{ width: '100%' }}
+                                    cover={<img alt="" src="public/images/projects/rules.png" />}
+                                    className='dark:inverse'
+                                >
+                                    <Card.Meta
+                                        title={post.title}
+                                        description={post["content:encodedSnippet"].split(" ").slice(0, 12).join(" ") + '...'}
+                                    />
+                                    <div className="meta d-flex align-items-center">
+                                        <div className="d-flex align-items-center">
+                                            <i className="fa-regular fa-calendar" />
+                                            <span>{new Date(post.pubDate).toLocaleDateString()}</span>
                                         </div>
-                                    </a>
-                                </Link>
+                                        <div className="d-flex align-items-center">
+                                            <i className="fa-regular fa-comments" />
+                                            <span>17 comments</span>
+                                        </div>
+                                    </div>
+                                </Card>
                             </div>
                         ))}
                     </div>
+
                     {/* LATEST POSTS ENDS */}
                 </section>
             )}
