@@ -4,19 +4,12 @@ import axios from 'axios';
 import { NextPage } from 'next';
 import { Audio } from 'react-loader-spinner';
 import Link from 'next/link';
-import { Card, ConfigProvider, theme, Tag } from 'antd';
+import { Card, ConfigProvider, theme, Tag, Divider } from 'antd';
+import { CalendarOutlined } from '@ant-design/icons';
 import { useTheme } from 'next-themes';
+import { Divide } from 'react-feather';
 // import 'antd/dist/antd.css'; // Import the Ant Design CSS
 
-// Rest of your code
-
-
-
-const Style = {
-    height: 498,
-    width: 680,
-    frameborder: 0
-};
 
 const Misc: NextPage<unknown> = () => {
     const [loading, setLoading] = useState(true);
@@ -51,18 +44,18 @@ const Misc: NextPage<unknown> = () => {
                     <Audio color="#3B82F6" height={80} width={80} />
                 </div>
             ) : (
-                <section className="blog flex main-section flex-column-mobile" id="blog">
+                <section className=" flex">
                     {/* TITLE STARTS */}
                     {/* ... */}
                     {/* TITLE ENDS */}
                     {/* LATEST POSTS STARTS */}
 
 
-                    <div className="latestposts flex flex-column-mobile justify-center flex-wrap ">
+                    <div className=" flex justify-center flex-wrap w-full">
                         {posts?.map((post: any, index) =>
 
                         (
-                            <div key={index} className="animated-layer dark:inverse fade-in-right-animation fadeInUp wow m-2 w-full">
+                            <div key={index} className=" m-2 w-full m-2 flex-shrink-0">
                                 <ConfigProvider
                                     theme={{
                                         algorithm: resolvedTheme == "dark" ? darkAlgorithm : defaultAlgorithm,
@@ -74,23 +67,32 @@ const Misc: NextPage<unknown> = () => {
                                         style={{
                                             width: '100%'
                                         }}
-                                        cover={<img alt="" src="public/images/projects/rules.png" />}
                                         className='dark:inverse'
-                                        extra={<a href={post.link}>Read More</a>}
-                                        size="small" title={post.title}
-                                    >
+                                        // extra={<a href={post.link}>Read More</a>}
+
+                                        size="small"
+
+                                    // title={<div style={{ wordBreak: "break-word", overflow: "hidden", whiteSpace: "nowrap" }}>{post.title}</div>}
+                                    // headStyle={{ wordBreak: 'break-word' }}
+                                    // headStyle={{ fontWeight: 'bold', display: 'flex', flexWrap: 'nowrap' }}
+                                    ><div className='flex justify-between'>
+
+                                            <h2 style={{ fontWeight: 'bold' }}>{post.title}</h2>
+                                            <a href={post.link} className='text-blue-500 ml-3'>Read More</a>
+                                        </div>
+                                        <Divider className='mt-2' />
                                         <Card.Meta
 
                                             description={getDescriptionSnippet(post["content:encodedSnippet"]).split(" ").slice(0, 42).join(" ") + '...'}
                                         />
-                                        <div className="meta d-flex align-items-center mt-2 flex justify-between">
+                                        <div className=" align-items-center mt-2 flex justify-between">
                                             <div className="d-flex ">
                                                 {post.categories.map((category: string, index: number) => (
-                                                    <Tag key={index} color="blue">{category}</Tag>
+                                                    <Tag key={index} color="blue" className='mt-1'>{category}</Tag>
                                                 ))}
                                             </div>
-                                            <div className="d-flex">
-                                                <i className="fa-regular fa-calendar" />
+                                            <div className="">
+                                                <CalendarOutlined />
                                                 <span>{new Date(post.pubDate).toLocaleDateString()}</span>
                                             </div>
                                         </div>
