@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, theme, ConfigProvider } from 'antd';
+import { Card, theme, ConfigProvider, Divider } from 'antd';
 import projectsData from '../components/data/projectData';
 import { LinkOutlined } from '@ant-design/icons';
 import { useTheme } from 'next-themes';
@@ -20,14 +20,11 @@ const ProjectsPage = () => {
                     <Card key={index} style={{ width: '100%', marginBottom: 10 }}>
                         <Meta
                             title={<h2 style={{ fontWeight: 'bold' }}>{project.title}</h2>}
-                            description={
-                                <>
-                                    <p>{project.duration}</p>
-                                </>
-                            }
                         />
+                        <Divider className="mt-2 mb-2" />
+                        <p className='text-gray-500'>{project.duration}</p>
                         <p>{project.description}</p>
-                        <a href={project.link} target="_blank" rel="noopener noreferrer" className='mt-5'>
+                        <a href={project.link} target="_blank" rel="noopener noreferrer" className='mt-5 text-blue-500'>
                             Learn More<LinkOutlined style={{ marginLeft: 5, }} />
                         </a>
                     </Card>
