@@ -1,23 +1,97 @@
 import ExtLink from './ExtLink'
 import data from './data/personalInfo.json'
+import React from 'react'
+import { Card, ConfigProvider, Tag, Divider, theme } from 'antd';
+import { CalendarOutlined } from '@ant-design/icons';
+import experienceData from '../components/data/experienceData';
+import { useTheme } from 'next-themes';
+
 
 const Education = (): JSX.Element => {
+    const { resolvedTheme, setTheme } = useTheme();
+    const { defaultAlgorithm, darkAlgorithm } = theme;
     return (
-        <section className="grid" id="education">
-            <h2 className="text-xl font-bold mt-12 mb-4">Education</h2>
-            <p className = "text-base ml-4 text-gray-700">
-                🐸 &nbsp;was at &nbsp;
-                {
-                    data.education.map((education, index) => {
-                        if (index == 0){
-                            return <ExtLink href={education.link} key={index}>{education.name}</ExtLink>
-                        }else{
-                            return <ExtLink href={education.link} key={index}>, {education.name}</ExtLink>
-                        }
-                    })
-                }
-            </p>
-        </section>
+        <div>
+            <h1>Research Experience</h1>
+            {experienceData
+                .filter((item) => item.category === 'Research Experience')
+                .map((item, index) => (
+                    <div key={index} className="m-2 w-full m-2 flex-shrink-0">
+                        <ConfigProvider theme={{
+                            algorithm: resolvedTheme == "dark" ? darkAlgorithm : defaultAlgorithm,
+                        }}>
+                            <Card
+                                bordered={false}
+                                style={{ width: '100%' }}
+                                className="dark:inverse"
+                                size="small"
+                            >
+                                <div className="flex justify-between">
+                                    <h2 style={{ fontWeight: 'bold' }}>{item.title},<h3 className='text-gray-500'>{item.role}</h3></h2>
+                                    <a href={item.link} className="text-blue-500 ml-3">
+                                        Read More
+                                    </a>
+                                </div>
+                                <Divider className="mt-2" />
+                                <Card.Meta description={item.description} />
+                                <div className="align-items-center mt-2 flex justify-between">
+                                    <div className="d-flex">
+                                        {item?.skills.map((category, index) => (
+                                            <Tag key={index} color="blue" className="mt-1">
+                                                {category}
+                                            </Tag>
+                                        ))}
+                                    </div>
+                                    <div className="">
+                                        <CalendarOutlined />
+                                        <span>{item.date}</span>
+                                    </div>
+                                </div>
+                            </Card>
+                        </ConfigProvider>
+                    </div>
+                ))}
+            <h1>Professional Experience</h1>
+            {experienceData
+                .filter((item) => item.category === 'Professional Experience')
+                .map((item, index) => (
+                    <div key={index} className="m-2 w-full m-2 flex-shrink-0">
+                        <ConfigProvider
+                            theme={{
+                                algorithm: resolvedTheme == "dark" ? darkAlgorithm : defaultAlgorithm,
+                            }}>
+                            <Card
+                                bordered={false}
+                                style={{ width: '100%' }}
+                                className="dark:inverse"
+                                size="small"
+                            >
+                                <div className="flex justify-between">
+                                    <h2 style={{ fontWeight: 'bold' }}>{item.title},<h3 className='text-gray-500'>{item.role}</h3></h2>
+                                    <a href={item.link} className="text-blue-500 ml-3">
+                                        Read More
+                                    </a>
+                                </div>
+                                <Divider className="mt-2" />
+                                <Card.Meta description={item.description} />
+                                <div className="align-items-center mt-2 flex justify-between">
+                                    <div className="d-flex">
+                                        {item.skills.map((category, index) => (
+                                            <Tag key={index} color="blue" className="mt-1">
+                                                {category}
+                                            </Tag>
+                                        ))}
+                                    </div>
+                                    <div className="">
+                                        <CalendarOutlined />
+                                        <span>{item.date}</span>
+                                    </div>
+                                </div>
+                            </Card>
+                        </ConfigProvider>
+                    </div>
+                ))}
+        </div>
     );
 };
 

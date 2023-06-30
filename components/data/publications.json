@@ -1,106 +1,15 @@
 [
 	{
-		"id": 5,
-		"author": "P.Harry, A.Dumbledor",
-		"title": "Towards Generalized Defensing Against the Dark Arts Spells",
-		"conference": "In Proc of ACM Conference of Magic, Hogwarts Owlery, England.",
-		"links": [
-			{
-				"name": "pdf",
-				"url": ""
-			},
-			{
-				"name": "slides",
-				"url": ""
-			},
-			{
-				"name": "video",
-				"url": ""
-			}
-		]
-	},
-
-	{
-		"id": 4,
-		"author": "P.Harry, A.Dumbledor",
-		"title": "Rethinking Defensing Against the Dark Arts Spells",
-		"conference": "In Proc of ACM Conference of Magic, Hogwarts Owlery, England.",
-		"links": [
-			{
-				"name": "pdf",
-				"url": ""
-			},
-			{
-				"name": "slides",
-				"url": ""
-			},
-			{
-				"name": "video",
-				"url": ""
-			}
-		]
-	},
-
-	{
-		"id": 3,
-		"author": "P.Harry, A.Dumbledor",
-		"title": "Pushing the Limits of Defensing Against the Dark Arts Spells",
-		"conference": "In Proc of ACM Conference of Magic, Hogwarts Owlery, England.",
-		"links": [
-			{
-				"name": "pdf",
-				"url": ""
-			},
-			{
-				"name": "slides",
-				"url": ""
-			},
-			{
-				"name": "video",
-				"url": ""
-			}
-		]
-	},
-
-	{
-		"id": 2,
-		"author": "P.Harry, A.Dumbledor",
-		"title": "Defensing Against the Dark Arts Spells based on Reductor Curse",
-		"conference": "In Proc of ACM Conference of Magic, Hogwarts Owlery, England.",
-		"links": [
-			{
-				"name": "pdf",
-				"url": ""
-			},
-			{
-				"name": "slides",
-				"url": ""
-			},
-			{
-				"name": "video",
-				"url": ""
-			}
-		]
-	},
-
-	{
 		"id": 1,
-		"author": "P.Harry, A.Dumbledor",
-		"title": "A Survey of Defensing Against the Dark Arts Spells",
-		"conference": "In Proc of ACM Conference of Magic, Hogwarts Owlery, England.",
+		"author": "Raghav Awasthi, Meet Modi, Hardik Dudeja, Tanav Bajaj, Shruti Rastogi, Tavpritesh Sethi",
+		"title": "A Graph Embedding Approach for Deciphering the Longitudinal Associations of Global Mobility and COVID-19 Cases",
+		"conference": "Under Review AMIA 2023 Annual Symposium",
 		"links": [
-			{
-				"name": "pdf",
-				"url": ""
-			},
-			{
-				"name": "slides",
-				"url": ""
-			},
-			{
-				"name": "video",
-				"url": ""
-			}
+		  {
+			"name": "Pre-Print",
+			"url": "https://www.medrxiv.org/content/10.1101/2023.03.30.23287969v1"
+		  }
 		]
-	}
+	  }
+	  
 ]
