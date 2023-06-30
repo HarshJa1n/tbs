@@ -12,7 +12,7 @@ const Education = (): JSX.Element => {
     const { defaultAlgorithm, darkAlgorithm } = theme;
     return (
         <div>
-            <h1>Research Experience</h1>
+            <h1 className="text-xl font-bold mt-12 mb-4">Research Experience</h1>
             {experienceData
                 .filter((item) => item.category === 'Research Experience')
                 .map((item, index) => (
@@ -28,9 +28,10 @@ const Education = (): JSX.Element => {
                             >
                                 <div className="flex justify-between">
                                     <h2 style={{ fontWeight: 'bold' }}>{item.title},<h3 className='text-gray-500'>{item.role}</h3></h2>
-                                    <a href={item.link} className="text-blue-500 ml-3">
-                                        Read More
-                                    </a>
+                                    <div className="m-2">
+                                        <CalendarOutlined />
+                                        <span className='ml-1'>{item.duration}</span>
+                                    </div>
                                 </div>
                                 <Divider className="mt-2" />
                                 <Card.Meta description={item.description} />
@@ -42,16 +43,12 @@ const Education = (): JSX.Element => {
                                             </Tag>
                                         ))}
                                     </div>
-                                    <div className="">
-                                        <CalendarOutlined />
-                                        <span>{item.date}</span>
-                                    </div>
                                 </div>
                             </Card>
                         </ConfigProvider>
                     </div>
                 ))}
-            <h1>Professional Experience</h1>
+            <h1 className="text-xl font-bold mt-12 mb-4">Professional Experience</h1>
             {experienceData
                 .filter((item) => item.category === 'Professional Experience')
                 .map((item, index) => (
@@ -68,9 +65,10 @@ const Education = (): JSX.Element => {
                             >
                                 <div className="flex justify-between">
                                     <h2 style={{ fontWeight: 'bold' }}>{item.title},<h3 className='text-gray-500'>{item.role}</h3></h2>
-                                    <a href={item.link} className="text-blue-500 ml-3">
-                                        Read More
-                                    </a>
+                                    <div className="m-2">
+                                        <CalendarOutlined />
+                                        <span className='ml-1'>{item.duration}</span>
+                                    </div>
                                 </div>
                                 <Divider className="mt-2" />
                                 <Card.Meta description={item.description} />
@@ -81,10 +79,6 @@ const Education = (): JSX.Element => {
                                                 {category}
                                             </Tag>
                                         ))}
-                                    </div>
-                                    <div className="">
-                                        <CalendarOutlined />
-                                        <span>{item.date}</span>
                                     </div>
                                 </div>
                             </Card>
