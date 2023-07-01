@@ -44,9 +44,9 @@ const Footer = (): JSX.Element => {
                     <Box href={personalInfo.socialMedia.GitHub} label="GitHub">
                         <IconImage path='/images/icons8-github.svg' name="GitHub" />
                     </Box>
-                    <Box href={personalInfo.socialMedia.Instagram} label="Instagram">
+                    {/* <Box href={personalInfo.socialMedia.Instagram} label="Instagram">
                         <IconImage path='/images/icons8-instagram.svg' name="Instagram" />
-                    </Box>
+                    </Box> */}
                     <Box href={personalInfo.socialMedia.YouTube} label="Youtube">
                         <IconImage path='/images/icons8-youtube.svg' name="Youtube" />
                     </Box>

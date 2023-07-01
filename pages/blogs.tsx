@@ -39,16 +39,14 @@ const Misc: NextPage<unknown> = () => {
 
     return (
         <div className="items-center">
+            <h1 className='text-xl font-bold  mb-4'>My Blogs</h1>
             {loading ? (
                 <div className="flex items-center justify-center h-full">
                     <Audio color="#3B82F6" height={80} width={80} />
                 </div>
             ) : (
                 <section className=" flex">
-                    {/* TITLE STARTS */}
-                    {/* ... */}
-                    {/* TITLE ENDS */}
-                    {/* LATEST POSTS STARTS */}
+
 
 
                     <div className=" flex justify-center flex-wrap w-full">

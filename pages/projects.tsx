@@ -11,7 +11,7 @@ const ProjectsPage = () => {
     const { defaultAlgorithm, darkAlgorithm } = theme;
     return (
         <div >
-            <h1 className='mb-3'>My Projects</h1>
+            <h1 className='text-xl font-bold  mb-4'>My Projects</h1>
             {projectsData.map((project, index) => (
                 <ConfigProvider
                     theme={{

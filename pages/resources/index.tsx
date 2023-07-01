@@ -132,7 +132,8 @@ const ResourcesPage = () => {
 
     return (
         <div className='w-full'>
-            <h1>ML/AI Resources</h1>
+            <h1 className='text-xl font-bold  mb-4'>Resources</h1>
+
             <div className='flex s:flex flex-wrap justify-center m-auto w-full'>
                 {resourcesData.map((topic) => (
                     <div key={topic.id} className='m-4 flex-wrap'>
