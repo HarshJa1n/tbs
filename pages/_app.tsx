@@ -9,7 +9,7 @@ import GoogleTag from '../components/GoogleTag';
 
 import 'tailwindcss/tailwind.css';
 
-const App = ({ Component, pageProps }: Readonly<AppProps>): JSX.Element => {
+const App = ({ Component, pageProps }: AppProps): JSX.Element => {
 	const { resolvedTheme } = useTheme();
 
 	return (
