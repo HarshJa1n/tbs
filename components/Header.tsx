@@ -24,7 +24,7 @@ const Header = ({ mounted, resolvedTheme, setTheme, scrolled }: HeaderProps): JS
                 <nav className="flex items-center justify-between pr-4">
                     <NavLink title="About" href="/#about" />
                     <NavLink title="Projects" href="/projects" />
-                    <NavLink title="Misc" href="/misc" />
+                    <NavLink title="Blogs" href="/blogs" />
                     <NavLink title="Resources" href="/resources" />
 
                     <button
@@ -40,6 +40,7 @@ const Header = ({ mounted, resolvedTheme, setTheme, scrolled }: HeaderProps): JS
                                 <Moon
                                     size={22}
                                     aria-label="Moon"
+
                                 />
                             ) : (
                                 <Sun

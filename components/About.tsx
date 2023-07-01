@@ -10,7 +10,7 @@ const About = (): JSX.Element => {
 	return (
 		<section className="grid " id="about">
 			<h1 className="text-4xl font-bold  mb-2 md:pb-0">{personalInfo.name}</h1>
-			<p className="text-sm text-gray-600 mb-10">
+			<p className="text-sm text-gray-500 mb-10">
 				RESEARCH ASSISTANT UOFT AND UBC | RESEARCH INTERN IIIT DELHI |
 				KAGGLE EXPERT | STUDENT IIIT BHOPAL
 			</p>
@@ -34,12 +34,13 @@ const About = (): JSX.Element => {
 						with like-minded individuals who are motivated to attaining mutual goals.
 					</p>
 
-					<p className="text-sm text-gray-600">
-						Research Interest: {personalInfo.about.interest}
+					<p className="text-sm pt-2 text-gray-600 dark:text-gray-400">
+						Words I live by:
 					</p>
-					<p className="text-sm text-gray-400">
-						Under construction......<br />
-						Re-architecting this site with some modern web technologies.
+					<p className="text-sm text-gray-600">
+						{/* Research Interest: {personalInfo.about.interest}
+						 */}
+						Aut Viam Inveniam Aut Faciam (It's Latin for "I will either find a way or make one")
 					</p>
 				</div>
 				<div className="mr-8 hidden md:block ">
