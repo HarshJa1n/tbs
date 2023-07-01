@@ -4,6 +4,7 @@ import ExtLink from './ExtLink';
 import ProfileImage from './ProfileImage';
 import personalInfo from './data/personalInfo.json'
 import React from 'react';
+import { Divider } from 'antd';
 
 
 const About = (): JSX.Element => {
@@ -18,17 +19,17 @@ const About = (): JSX.Element => {
 
 				<div className="flex flex-col max-w-xl w-full justify-evenly pr-4">
 
-					<p className='mb-4'>
+					<p className='mb-4 dark:text-gray-300'>
 						{/* I am a {personalInfo.about.year} PhD student
 						in <ExtLink href={personalInfo.about.department.link}>{personalInfo.about.department.name} </ExtLink>
 						at <ExtLink href={personalInfo.about.college.link}>{personalInfo.about.college.name} </ExtLink>
 						advised by <ExtLink href={personalInfo.about.advisor.link}> {personalInfo.about.advisor.name}. </ExtLink>
-						<br /><a className="text-sm">✉️ {personalInfo.about.email}</a> */}
+					<br /><a className="text-sm">✉️ {personalInfo.about.email}</a> */}
 						{/* {personalInfo.about.description} */}
 						My goal as a highly motivated BTech student is to pursue an academic path that will allow me to challenge myself,
 						broaden my knowledge and skills, and make a meaningful contribution to the field of data science and research.
 					</p>
-					<p>
+					<p className='dark:text-gray-300'>
 						I am
 						excited to work with outstanding academics that have a wealth of experience and expertise, as well as cooperate
 						with like-minded individuals who are motivated to attaining mutual goals.
