@@ -29,7 +29,7 @@ const Education = (): JSX.Element => {
                                 <div className="flex justify-between">
                                     <h2 style={{ fontWeight: 'bold' }}>{item.title},<h3 className='text-gray-500'>{item.role}</h3></h2>
                                     <div className="m-2">
-                                        <CalendarOutlined />
+                                        <CalendarOutlined rev="what" />
                                         <span className='ml-1'>{item.duration}</span>
                                     </div>
                                 </div>
@@ -66,7 +66,7 @@ const Education = (): JSX.Element => {
                                 <div className="flex justify-between">
                                     <h2 style={{ fontWeight: 'bold' }}>{item.title},<h3 className='text-gray-500'>{item.role}</h3></h2>
                                     <div className="m-2">
-                                        <CalendarOutlined />
+                                        <CalendarOutlined rev="what" />
                                         <span className='ml-1'>{item.duration}</span>
                                     </div>
                                 </div>

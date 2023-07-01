@@ -70,7 +70,7 @@ const ResourcePage = () => {
     const { defaultAlgorithm, darkAlgorithm } = theme;
 
 
-    const resourceD = resourcesData?.find((topic) => topic.id === parseInt(resource));
+    const resourceD = resourcesData?.find((topic) => topic.id === parseInt(resource as string));
 
     if (!resourceD) {
         return <div>Resource not found.</div>;

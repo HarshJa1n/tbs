@@ -34,7 +34,7 @@ const projectsData = [
         duration: "March 2023",
         link: "https://www.kaggle.com/code/tanavbajaj/graph-analysis-on-my-linkedin/notebook",
         description: "Demonstrated expertise in network analysis by creating and visualizing a comprehensive LinkedIn connections graph using Python and NetworkX. Identified and leveraged insights from the graph's structure, including key companies and positions, to make informed strategic decisions and maximize the value of my professional network."
-    }
+    },
 ];
 
 export default projectsData;
