@@ -92,7 +92,7 @@ const Misc: NextPage<unknown> = () => {
                                                 ))}
                                             </div>
                                             <div className="">
-                                                <CalendarOutlined />
+                                                <CalendarOutlined rev="wtf" />
                                                 <span>{new Date(post.pubDate).toLocaleDateString()}</span>
                                             </div>
                                         </div>

@@ -25,7 +25,7 @@ const ProjectsPage = () => {
                         <p className='text-gray-500'>{project.duration}</p>
                         <p>{project.description}</p>
                         <a href={project.link} target="_blank" rel="noopener noreferrer" className='mt-5 text-blue-500'>
-                            Learn More<LinkOutlined style={{ marginLeft: 5, }} />
+                            Learn More<LinkOutlined style={{ marginLeft: 5, }} rev="wr" />
                         </a>
                     </Card>
                 </ConfigProvider>
