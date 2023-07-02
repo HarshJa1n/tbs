@@ -16,7 +16,8 @@ const ProjectsPage = () => {
                 <ConfigProvider
                     theme={{
                         algorithm: resolvedTheme === 'dark' ? darkAlgorithm : defaultAlgorithm,
-                    }}>
+                    }}
+                    key={index}>
                     <Card key={index} style={{ width: '100%', marginBottom: 10 }}>
                         <Meta
                             title={<h2 style={{ fontWeight: 'bold' }}>{project.title}</h2>}
